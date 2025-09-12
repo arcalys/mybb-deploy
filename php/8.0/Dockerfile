@@ -1,6 +1,6 @@
 ARG PHP_VERSION=8.0
 
-FROM php:${PHP_VERSION}-fpm-alpine
+FROM docker.io/php:${PHP_VERSION}-fpm-alpine
 
 ARG XDEBUG=false
 ARG XDEBUG_VERSION
