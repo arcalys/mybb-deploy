@@ -2,7 +2,7 @@ services:
   # PHP interpreters & tools
   composer:
     profiles: ["composer"]
-    image: composer:latest
+    image: docker.io/composer:latest
     command: /scripts/composer-install.sh
     environment:
       - COMPOSER_NO_DEV=${COMPOSER_NO_DEV:-}
@@ -47,7 +47,7 @@ services:
 
   # web servers
   nginx:
-    image: nginx:latest
+    image: docker.io/nginx:latest
     ports:
       - "${NGINX_PUBLISHED_PORT:-8080}:80"
     volumes:
@@ -60,7 +60,7 @@ services:
   # database systems
   postgresql:
     profiles: ["db.postgresql"]
-    image: postgres
+    image: docker.io/postgres
     environment:
       POSTGRES_DB: mybb
       POSTGRES_USER: mybb
@@ -72,7 +72,7 @@ services:
 
   mysql:
     profiles: ["db.mysql"]
-    image: mariadb
+    image: docker.io/mariadb
     environment:
       MYSQL_USER: mybb
       MYSQL_PASSWORD: mybb

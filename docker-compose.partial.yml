@@ -8,4 +8,4 @@ services:
         - XDEBUG_VERSION=${XDEBUG_VERSION:-}
 
   php_prebuilt:
-    image: webdevops/php-dev:${PHP_VERSION:-8.0}-alpine
+    image: docker.io/webdevops/php-dev:${PHP_VERSION:-8.0}-alpine
